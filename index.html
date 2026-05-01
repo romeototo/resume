@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RoMEoTOTO — IT Support & Developer Resume</title>
+<meta name="description" content="Resume ของ RoMEoTOTO — IT Support Specialist ผู้สร้าง AI Chatbot ลด Ticket 40%">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0e17;--surface:#111827;--surface2:#1e293b;
+  --primary:#6C63FF;--primary-glow:rgba(108,99,255,0.15);
+  --accent:#00D9FF;--success:#22c55e;--warn:#f59e0b;
+  --text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;
+  --border:rgba(255,255,255,0.06);
+  --radius:12px;
+}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+a{color:var(--accent);text-decoration:none;transition:color .2s}
+a:hover{color:var(--primary)}
+
+/* PRINT */
+@media print{
+  body{background:#fff;color:#111;font-size:11pt}
+  .no-print{display:none!important}
+  .container{max-width:100%;padding:0;box-shadow:none}
+  section{break-inside:avoid}
+  a{color:#111;text-decoration:underline}
+  .hero{background:#f8fafc!important}
+  .tag{background:#e2e8f0!important;color:#334155!important}
+}
+
+.container{max-width:800px;margin:0 auto;padding:24px}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,rgba(108,99,255,0.1),rgba(0,217,255,0.05));
+  border:1px solid var(--border);border-radius:var(--radius);
+  padding:40px;margin-bottom:24px;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;top:-50%;right:-50%;width:200%;height:200%;
+  background:radial-gradient(circle,rgba(108,99,255,0.03) 0%,transparent 70%);
+  animation:pulse 8s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.hero-content{position:relative;z-index:1}
+.hero h1{font-size:2rem;font-weight:800;margin-bottom:4px}
+.hero h1 span{background:linear-gradient(135deg,var(--primary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero .subtitle{font-size:1.1rem;color:var(--accent);font-weight:600;margin-bottom:16px}
+.hero .tagline{color:var(--text2);font-size:0.95rem;margin-bottom:20px}
+.contact-row{display:flex;flex-wrap:wrap;gap:16px;font-size:0.88rem;color:var(--text2)}
+.contact-row a{color:var(--accent)}
+
+/* SECTIONS */
+section{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:28px;margin-bottom:20px;
+}
+section h2{
+  font-size:1.15rem;font-weight:700;margin-bottom:16px;
+  display:flex;align-items:center;gap:8px;
+  padding-bottom:10px;border-bottom:1px solid var(--border);
+}
+section h2 .icon{font-size:1.3rem}
+
+/* HIGHLIGHT */
+.highlight-card{
+  background:linear-gradient(135deg,rgba(108,99,255,0.08),rgba(0,217,255,0.04));
+  border:1px solid rgba(108,99,255,0.15);border-radius:10px;
+  padding:20px;margin-bottom:16px;
+}
+.highlight-card h3{font-size:1rem;font-weight:700;color:var(--primary);margin-bottom:4px}
+.highlight-card .sub{color:var(--accent);font-size:0.85rem;margin-bottom:10px}
+.highlight-card p{color:var(--text2);font-size:0.9rem;margin-bottom:10px}
+.highlight-card .metrics{display:flex;flex-wrap:wrap;gap:12px}
+.metric{background:var(--surface2);border-radius:8px;padding:8px 14px;font-size:0.82rem;color:var(--text)}
+.metric strong{color:var(--accent)}
+
+/* TAGS */
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.tag{
+  background:var(--surface2);border:1px solid var(--border);
+  border-radius:20px;padding:5px 14px;font-size:0.8rem;
+  color:var(--text2);transition:all .2s;
+}
+.tag:hover{border-color:var(--primary);color:var(--primary)}
+.tag.primary{background:var(--primary-glow);color:var(--primary);border-color:rgba(108,99,255,0.3)}
+
+/* TIMELINE */
+.timeline-item{margin-bottom:16px;padding-left:20px;border-left:2px solid var(--surface2);position:relative}
+.timeline-item::before{content:'';position:absolute;left:-5px;top:6px;width:8px;height:8px;border-radius:50%;background:var(--primary)}
+.timeline-item h3{font-size:0.95rem;font-weight:600}
+.timeline-item .period{font-size:0.82rem;color:var(--text3)}
+.timeline-item ul{margin-top:6px;padding-left:18px;color:var(--text2);font-size:0.88rem}
+.timeline-item li{margin-bottom:4px}
+
+/* CERT */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.cert-card{
+  background:var(--surface2);border:1px solid var(--border);border-radius:10px;
+  padding:14px;text-align:center;transition:all .2s;
+}
+.cert-card:hover{border-color:var(--primary);transform:translateY(-2px)}
+.cert-card .cert-icon{font-size:1.5rem;margin-bottom:6px}
+.cert-card .cert-name{font-size:0.85rem;font-weight:600;margin-bottom:2px}
+.cert-card .cert-org{font-size:0.78rem;color:var(--text3)}
+
+/* LINKS */
+.links-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.link-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--surface2);border:1px solid var(--border);
+  border-radius:8px;padding:8px 16px;font-size:0.85rem;
+  color:var(--text);transition:all .2s;
+}
+.link-btn:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-1px)}
+.link-btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
+.link-btn.primary:hover{background:#5a52e0;transform:translateY(-1px)}
+
+/* FOOTER */
+.footer{text-align:center;color:var(--text3);font-size:0.82rem;padding:20px;margin-top:20px}
+
+@media(max-width:640px){
+  .container{padding:12px}
+  .hero{padding:24px}
+  .hero h1{font-size:1.5rem}
+  .contact-row{flex-direction:column;gap:6px}
+  .cert-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-content">
+  <h1><span>RoMEoTOTO</span></h1>
+  <div class="subtitle">IT Support Specialist & AI Developer</div>
+  <div class="tagline">ลด Ticket ซ้ำซาก 40% ด้วย AI Chatbot | สร้างเครื่องมือ Automation ช่วยทีม IT</div>
+  <div class="contact-row">
+    <span>📍 Bangkok, Thailand</span>
+    <a href="https://github.com/romeototo" target="_blank">🔗 github.com/romeototo</a>
+    <a href="https://x.com/RoMeoT0T0" target="_blank">🐦 @RoMeoT0T0</a>
+  </div>
+</div>
+</div>
+
+<!-- PROFILE -->
+<section>
+<h2><span class="icon">👤</span> Profile Summary</h2>
+<p style="color:var(--text2);font-size:0.92rem">
+  IT Support & Developer ที่ผสมผสานทักษะ <strong>Troubleshooting</strong> กับ <strong>AI Automation</strong> 
+  เพื่อสร้างเครื่องมือที่ช่วยให้ทีม IT ทำงานได้มีประสิทธิภาพมากขึ้น มีประสบการณ์สร้าง AI Chatbot 
+  ที่ตอบปัญหา IT ได้ 202 คำถาม ครอบคลุม 45 หมวดหมู่ พร้อม Gemini AI Integration
+</p>
+</section>
+
+<!-- PROJECTS -->
+<section>
+<h2><span class="icon">🚀</span> Featured Projects</h2>
+
+<div class="highlight-card">
+  <h3>🖥️ IT Support AI Chatbot</h3>
+  <div class="sub">Python • Flask • Gemini AI • Vanilla JS</div>
+  <p>AI Chatbot สำหรับ IT Support ภายในองค์กร ตอบคำถามปัญหาไอทีอัตโนมัติ พร้อมระบบ Ticket, Feedback, และ Stats Dashboard</p>
+  <div class="metrics">
+    <div class="metric"><strong>202</strong>&nbsp;FAQ</div>
+    <div class="metric"><strong>45</strong>&nbsp;Categories</div>
+    <div class="metric"><strong>Gemini</strong>&nbsp;AI</div>
+    <div class="metric"><strong>Mobile</strong>&nbsp;Responsive</div>
+  </div>
+  <div class="links-row">
+    <a href="https://romeototo.github.io/it-support-chatbot/" target="_blank" class="link-btn primary">🔗 Live Demo</a>
+    <a href="https://github.com/romeototo/it-support-chatbot" target="_blank" class="link-btn">📦 Source Code</a>
+  </div>
+</div>
+
+<div class="highlight-card">
+  <h3>🤖 Telegram AI IT Automation Agent</h3>
+  <div class="sub">Python • Gemini AI • Telegram Bot API</div>
+  <p>AI Agent ที่ทำ IT Automation ผ่าน Telegram มี Safety Guardrails, Allowlist/Denylist, Dry-run Mode และ Audit Logging</p>
+  <div class="links-row">
+    <a href="https://github.com/romeototo/telegram-ai-it-automation-agent" target="_blank" class="link-btn">📦 Source Code</a>
+  </div>
+</div>
+
+<div class="highlight-card">
+  <h3>🎮 Rialo Network Tycoon & Monster Tapper</h3>
+  <div class="sub">JavaScript • HTML5 • CSS3</div>
+  <p>Web Games ที่ใช้ Vanilla JS สร้าง — โชว์ทักษะ Frontend, Animation, State Management และ Game Logic</p>
+  <div class="links-row">
+    <a href="https://romeototo.github.io/ai-tycoon-rialo-game/" target="_blank" class="link-btn">🎮 Play Tycoon</a>
+    <a href="https://romeototo.github.io/monster-tapper/" target="_blank" class="link-btn">👾 Play Monster</a>
+  </div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section>
+<h2><span class="icon">🛠️</span> Technical Skills</h2>
+
+<div style="margin-bottom:14px">
+<div style="font-size:0.85rem;font-weight:600;color:var(--primary);margin-bottom:6px">IT Support & Infrastructure</div>
+<div class="tags">
+  <span class="tag primary">Troubleshooting</span>
+  <span class="tag primary">Active Directory</span>
+  <span class="tag primary">Office 365</span>
+  <span class="tag">VPN / Remote Desktop</span>
+  <span class="tag">Network (DNS, DHCP, TCP/IP)</span>
+  <span class="tag">Windows Server</span>
+  <span class="tag">Group Policy</span>
+  <span class="tag">Print Management</span>
+  <span class="tag">MFA / Security</span>
+</div>
+</div>
+
+<div style="margin-bottom:14px">
+<div style="font-size:0.85rem;font-weight:600;color:var(--primary);margin-bottom:6px">Programming & Development</div>
+<div class="tags">
+  <span class="tag primary">Python</span>
+  <span class="tag primary">JavaScript (ES6+)</span>
+  <span class="tag">HTML5 / CSS3</span>
+  <span class="tag">Flask</span>
+  <span class="tag">REST API</span>
+  <span class="tag">JSON / SQL</span>
+  <span class="tag">Git / GitHub</span>
+</div>
+</div>
+
+<div>
+<div style="font-size:0.85rem;font-weight:600;color:var(--primary);margin-bottom:6px">AI & Automation</div>
+<div class="tags">
+  <span class="tag primary">Google Gemini API</span>
+  <span class="tag">NLP / Keyword Matching</span>
+  <span class="tag">Chatbot Development</span>
+  <span class="tag">PowerShell Scripting</span>
+  <span class="tag">Telegram Bot API</span>
+  <span class="tag">Process Automation</span>
+</div>
+</div>
+</section>
+
+<!-- CERTS -->
+<section>
+<h2><span class="icon">🎓</span> Certificates & Learning</h2>
+<div class="cert-grid">
+  <div class="cert-card">
+    <div class="cert-icon">🏆</div>
+    <div class="cert-name">Google IT Support</div>
+    <div class="cert-org">Coursera (กำลังศึกษา)</div>
+  </div>
+  <div class="cert-card">
+    <div class="cert-icon">☁️</div>
+    <div class="cert-name">Microsoft AZ-900</div>
+    <div class="cert-org">Azure Fundamentals (กำลังศึกษา)</div>
+  </div>
+  <div class="cert-card">
+    <div class="cert-icon">🛡️</div>
+    <div class="cert-name">Microsoft SC-900</div>
+    <div class="cert-org">Security Fundamentals (กำลังศึกษา)</div>
+  </div>
+</div>
+<p style="margin-top:12px;font-size:0.82rem;color:var(--text3)">
+  * อัปเดตสถานะ Certificate ได้ตลอดเมื่อสอบผ่าน
+</p>
+</section>
+
+<!-- LINKS -->
+<section>
+<h2><span class="icon">🔗</span> Links & Portfolio</h2>
+<div class="links-row">
+  <a href="https://github.com/romeototo" target="_blank" class="link-btn primary">🐙 GitHub Profile</a>
+  <a href="https://romeototo.github.io/it-support-chatbot/" target="_blank" class="link-btn">🖥️ IT Chatbot Demo</a>
+  <a href="https://romeototo.github.io/MyFirstProject/" target="_blank" class="link-btn">🌐 Portfolio Website</a>
+  <a href="https://x.com/RoMeoT0T0" target="_blank" class="link-btn">🐦 X / Twitter</a>
+</div>
+</section>
+
+<div class="footer no-print">
+  Built with ❤️ by RoMEoTOTO — <a href="https://github.com/romeototo">github.com/romeototo</a>
+</div>
+
+</div>
+</body>
+</html>

@@ -12,7 +12,7 @@
   --bg:#09090b;--surface:rgba(24,24,27,0.6);--surface2:rgba(39,39,42,0.6);
   --primary:#818cf8;--primary2:#a5b4fc;--accent:#22d3ee;--accent2:#06b6d4;
   --success:#34d399;--warn:#fbbf24;
-  --text:#f8fafc;--text2:#94a3b8;--text3:#475569;
+  --text:#f8fafc;--text2:#cbd5e1;--text3:#64748b;
   --border:rgba(255,255,255,0.06);--glass:rgba(255,255,255,0.02);
   --radius:16px;--radius-sm:10px;
 }
@@ -70,6 +70,13 @@ a:hover{color:var(--primary2)}
   transition:all .3s;
 }
 .pill:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-1px)}
+.pill.primary {
+  background:rgba(129,140,248,0.15); border-color:var(--primary); color:var(--primary2);
+  box-shadow: 0 0 10px rgba(129,140,248,0.2);
+}
+.pill.primary:hover {
+  box-shadow: 0 0 20px rgba(129,140,248,0.4); transform:translateY(-2px);
+}
 
 /* STATS */
 .stats-bar{
@@ -207,10 +214,27 @@ section:hover{border-color:rgba(124,108,255,0.15)}
 .d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}
 .d4{animation-delay:.4s}.d5{animation-delay:.5s}.d6{animation-delay:.6s}
 
+/* PROGRESS BAR & FAB */
+.c-progress-wrap { margin-top: 10px; text-align: left; }
+.c-progress-wrap .c-status { display: flex; justify-content: space-between; font-size: 0.65rem; color: var(--warn); margin-bottom: 5px; font-weight: 600; }
+.c-progress-bar { width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
+.c-progress { height: 100%; background: linear-gradient(90deg, var(--warn), #f59e0b); border-radius: 10px; transition: width 1s ease-out; }
+
+.fab-print {
+  position: fixed; bottom: 30px; right: 30px; z-index: 99;
+  background: linear-gradient(135deg, var(--primary), #5b4fcf);
+  color: #fff; width: 55px; height: 55px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; cursor: pointer; border: none;
+  box-shadow: 0 8px 25px rgba(129,140,248,0.4); transition: all 0.3s;
+}
+.fab-print:hover { transform: scale(1.1) translateY(-5px); box-shadow: 0 12px 30px rgba(129,140,248,0.6); }
+.print-qr-code { display: none; }
+
 /* PRINT */
 @media print{
   body{background:#fff;color:#1e293b;font-size:10pt}
-  .bg-grid,.bg-glow,.no-print{display:none!important}
+  .bg-grid,.bg-glow,.no-print, .fab-print {display:none!important}
   .container{max-width:100%;padding:0}
   section,.hero,.stat-card,.project,.cert,.value-card{
     background:#f8fafc!important;border-color:#e2e8f0!important;
@@ -219,6 +243,12 @@ section:hover{border-color:rgba(124,108,255,0.15)}
   .skill{background:#f1f5f9!important;border-color:#cbd5e1!important;color:#334155!important}
   a{color:#1e293b!important}
   .stat-num,.hero-text h1 span{-webkit-text-fill-color:#4338ca!important}
+  .c-progress-bar { background: #e2e8f0 !important; }
+  .c-progress { background: #f59e0b !important; }
+  .pill.primary { border-color: #cbd5e1 !important; color: #1e293b !important; box-shadow: none !important; }
+  .print-qr-code { display: block !important; position: absolute; top: 30px; right: 30px; text-align: center; }
+  .print-qr-code img { width: 80px; height: 80px; border-radius: 8px; border: 1px solid #e2e8f0; }
+  .print-qr-code p { font-size: 0.65rem; color: #64748b; margin-top: 4px; font-weight: 600; }
 }
 
 @media(max-width:640px){
@@ -252,11 +282,15 @@ section:hover{border-color:rgba(124,108,255,0.15)}
     <div class="tagline">สาย IT ที่ชอบจับ AI มาทำระบบออโต้ ช่วยทีมจัดการ Ticket ซ้ำๆ จะได้เลิกปวดหัวแล้วกลับบ้านตรงเวลา</div>
     <div class="contact-pills">
       <span class="pill">📍 Bangkok</span>
-      <a href="https://github.com/romeototo" class="pill" target="_blank">🐙 GitHub</a>
+      <a href="https://github.com/romeototo" class="pill primary" target="_blank">🐙 GitHub</a>
       <a href="https://x.com/RoMeoT0T0" class="pill" target="_blank">𝕏 @RoMeoT0T0</a>
-      <a href="https://romeototo.github.io/it-support-chatbot/" class="pill" target="_blank">🖥 Live Demo</a>
+      <a href="https://romeototo.github.io/portfolio-website/" class="pill primary" target="_blank">🌐 Portfolio</a>
     </div>
   </div>
+</div>
+<div class="print-qr-code">
+  <img src="resume_qr.png" alt="QR Code">
+  <p>Scan to view<br>Interactive Resume</p>
 </div>
 </div>
 
@@ -422,19 +456,28 @@ section:hover{border-color:rgba(124,108,255,0.15)}
     <div class="c-icon">🏆</div>
     <div class="c-name">Google IT Support</div>
     <div class="c-org">Coursera</div>
-    <div class="c-status">📖 In Progress</div>
+    <div class="c-progress-wrap">
+      <div class="c-status"><span>📖 In Progress</span><span>80%</span></div>
+      <div class="c-progress-bar"><div class="c-progress" style="width: 80%"></div></div>
+    </div>
   </div>
   <div class="cert">
     <div class="c-icon">&#9729;</div>
     <div class="c-name">Microsoft AZ-900</div>
     <div class="c-org">Azure Fundamentals</div>
-    <div class="c-status">📖 In Progress</div>
+    <div class="c-progress-wrap">
+      <div class="c-status"><span>📖 In Progress</span><span>50%</span></div>
+      <div class="c-progress-bar"><div class="c-progress" style="width: 50%"></div></div>
+    </div>
   </div>
   <div class="cert">
     <div class="c-icon">🔒</div>
     <div class="c-name">Microsoft SC-900</div>
     <div class="c-org">Security Fundamentals</div>
-    <div class="c-status">📖 In Progress</div>
+    <div class="c-progress-wrap">
+      <div class="c-status"><span>📖 In Progress</span><span>30%</span></div>
+      <div class="c-progress-bar"><div class="c-progress" style="width: 30%"></div></div>
+    </div>
   </div>
 </div>
 </section>
@@ -459,6 +502,9 @@ section:hover{border-color:rgba(124,108,255,0.15)}
 </div>
 
 </div>
+
+<!-- Floating Action Button -->
+<button class="fab-print" onclick="window.print()" title="Save as PDF">🖨️</button>
 
 <script>
 // Intersection Observer for scroll animations

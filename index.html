@@ -1,578 +1,1309 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RoMEoTOTO — IT Support & AI Developer</title>
-<meta name="description" content="Resume — IT Support Specialist ผู้สร้าง AI Chatbot ลด Ticket 40%">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#09090b;--surface:rgba(24,24,27,0.6);--surface2:rgba(39,39,42,0.6);
-  --primary:#818cf8;--primary2:#a5b4fc;--accent:#22d3ee;--accent2:#06b6d4;
-  --success:#34d399;--warn:#fbbf24;
-  --text:#f8fafc;--text2:#cbd5e1;--text3:#64748b;
-  --border:rgba(255,255,255,0.06);--glass:rgba(255,255,255,0.02);
-  --radius:16px;--radius-sm:10px;
-}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
-h1, h2, h3, .stat-num { font-family: 'Outfit', sans-serif; }
-a{color:var(--accent);text-decoration:none;transition:all .3s}
-a:hover{color:var(--primary2)}
-.s-icon,.c-icon,.v-icon{font-family:'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji',sans-serif;contain:inline-size;line-height:1}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RoMEoTOTO — IT Support & AI Developer</title>
+    <meta
+      name="description"
+      content="Resume — IT Support Specialist ผู้สร้าง AI Chatbot ลด Ticket 40%"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --bg: #09090b;
+        --surface: rgba(24, 24, 27, 0.6);
+        --surface2: rgba(39, 39, 42, 0.6);
+        --primary: #818cf8;
+        --primary2: #a5b4fc;
+        --accent: #22d3ee;
+        --accent2: #06b6d4;
+        --success: #34d399;
+        --warn: #fbbf24;
+        --text: #f8fafc;
+        --text2: #cbd5e1;
+        --text3: #64748b;
+        --border: rgba(255, 255, 255, 0.06);
+        --glass: rgba(255, 255, 255, 0.02);
+        --radius: 16px;
+        --radius-sm: 10px;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+      h1,
+      h2,
+      h3,
+      .stat-num {
+        font-family: "Outfit", sans-serif;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+      a:hover {
+        color: var(--primary2);
+      }
+      .s-icon,
+      .c-icon,
+      .v-icon {
+        font-family:
+          "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+        contain: inline-size;
+        line-height: 1;
+      }
 
-/* ANIMATED BG */
-.bg-grid{position:fixed;inset:0;z-index:0;pointer-events:none;
-  background-image:linear-gradient(rgba(124,108,255,0.03) 1px,transparent 1px),
-                    linear-gradient(90deg,rgba(124,108,255,0.03) 1px,transparent 1px);
-  background-size:60px 60px;
-}
-.bg-glow{position:fixed;z-index:0;pointer-events:none;border-radius:50%;filter:blur(120px);opacity:.15}
-.bg-glow.g1{top:-20%;left:-10%;width:600px;height:600px;background:var(--primary);animation:float1 20s ease-in-out infinite}
-.bg-glow.g2{bottom:-20%;right:-10%;width:500px;height:500px;background:var(--accent);animation:float2 25s ease-in-out infinite}
-@keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(80px,60px)}}
-@keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-60px,-40px)}}
+      /* ANIMATED BG */
+      .bg-grid {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background-image:
+          linear-gradient(rgba(124, 108, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(124, 108, 255, 0.03) 1px, transparent 1px);
+        background-size: 60px 60px;
+      }
+      .bg-glow {
+        position: fixed;
+        z-index: 0;
+        pointer-events: none;
+        border-radius: 50%;
+        filter: blur(120px);
+        opacity: 0.15;
+      }
+      .bg-glow.g1 {
+        top: -20%;
+        left: -10%;
+        width: 600px;
+        height: 600px;
+        background: var(--primary);
+        animation: float1 20s ease-in-out infinite;
+      }
+      .bg-glow.g2 {
+        bottom: -20%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        background: var(--accent);
+        animation: float2 25s ease-in-out infinite;
+      }
+      @keyframes float1 {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(80px, 60px);
+        }
+      }
+      @keyframes float2 {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(-60px, -40px);
+        }
+      }
 
-.container{max-width:960px;margin:0 auto;padding:32px 20px;position:relative;z-index:1}
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 32px 20px;
+        position: relative;
+        z-index: 1;
+      }
 
-/* HERO */
-.hero{
-  position:relative;border-radius:var(--radius);overflow:hidden;
-  padding:48px 40px;margin-bottom:28px;
-  background:linear-gradient(135deg,rgba(124,108,255,0.12),rgba(34,211,238,0.06),rgba(124,108,255,0.04));
-  border:1px solid rgba(124,108,255,0.15);
-  backdrop-filter:blur(20px);
-}
-.hero::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,transparent 50%,rgba(124,108,255,0.05));
-}
-.hero-inner{position:relative;z-index:1;display:flex;align-items:center;gap:32px}
-.avatar{
-  width:120px;height:120px;border-radius:50%;flex-shrink:0;
-  object-fit:cover;
-  border: 3px solid rgba(255,255,255,0.1);
-  box-shadow:0 0 30px rgba(129,140,248,0.3);
-  animation:avatarPulse 3s ease-in-out infinite;
-}
-@keyframes avatarPulse{0%,100%{box-shadow:0 0 20px rgba(129,140,248,0.2)}50%{box-shadow:0 0 40px rgba(129,140,248,0.4)}}
-.hero-text h1{font-size:2.2rem;font-weight:900;letter-spacing:-0.5px;margin-bottom:2px}
-.hero-text h1 span{background:linear-gradient(135deg,#a78bfa,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero-text .role{font-size:1.05rem;color:var(--accent);font-weight:600;margin-bottom:8px}
-.hero-text .tagline{color:var(--text2);font-size:0.9rem;margin-bottom:14px;max-width:480px}
-.contact-pills{display:flex;flex-wrap:wrap;gap:8px}
-.pill{
-  display:inline-flex;align-items:center;gap:5px;
-  background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);
-  border-radius:20px;padding:4px 14px;font-size:0.78rem;color:var(--text2);
-  transition:all .3s;
-}
-.pill:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-1px)}
-.pill.primary {
-  background:rgba(129,140,248,0.15); border-color:var(--primary); color:var(--primary2);
-  box-shadow: 0 0 10px rgba(129,140,248,0.2);
-}
-.pill.primary:hover {
-  box-shadow: 0 0 20px rgba(129,140,248,0.4); transform:translateY(-2px);
-}
+      /* HERO */
+      .hero {
+        position: relative;
+        border-radius: var(--radius);
+        overflow: hidden;
+        padding: 48px 40px;
+        margin-bottom: 28px;
+        background: linear-gradient(
+          135deg,
+          rgba(124, 108, 255, 0.12),
+          rgba(34, 211, 238, 0.06),
+          rgba(124, 108, 255, 0.04)
+        );
+        border: 1px solid rgba(124, 108, 255, 0.15);
+        backdrop-filter: blur(20px);
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          transparent 50%,
+          rgba(124, 108, 255, 0.05)
+        );
+      }
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+      .avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        object-fit: cover;
+        border: 3px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 30px rgba(129, 140, 248, 0.3);
+        animation: avatarPulse 3s ease-in-out infinite;
+      }
+      @keyframes avatarPulse {
+        0%,
+        100% {
+          box-shadow: 0 0 20px rgba(129, 140, 248, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 40px rgba(129, 140, 248, 0.4);
+        }
+      }
+      .hero-text h1 {
+        font-size: 2.2rem;
+        font-weight: 900;
+        letter-spacing: -0.5px;
+        margin-bottom: 2px;
+      }
+      .hero-text h1 span {
+        background: linear-gradient(135deg, #a78bfa, #22d3ee);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-text .role {
+        font-size: 1.05rem;
+        color: var(--accent);
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .hero-text .tagline {
+        color: var(--text2);
+        font-size: 0.9rem;
+        margin-bottom: 14px;
+        max-width: 480px;
+      }
+      .contact-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
+        padding: 4px 14px;
+        font-size: 0.78rem;
+        color: var(--text2);
+        transition: all 0.3s;
+      }
+      .pill:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+        transform: translateY(-1px);
+      }
+      .pill.primary {
+        background: rgba(129, 140, 248, 0.15);
+        border-color: var(--primary);
+        color: var(--primary2);
+        box-shadow: 0 0 10px rgba(129, 140, 248, 0.2);
+      }
+      .pill.primary:hover {
+        box-shadow: 0 0 20px rgba(129, 140, 248, 0.4);
+        transform: translateY(-2px);
+      }
 
-/* STATS */
-.stats-bar{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px;
-}
-.stat-card{
-  background:var(--surface);backdrop-filter:blur(10px);
-  border:1px solid var(--border);border-radius:var(--radius-sm);
-  padding:18px;text-align:center;transition:all .3s;position:relative;overflow:hidden;
-}
-.stat-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(124,108,255,0.05),transparent);opacity:0;transition:opacity .3s}
-.stat-card:hover{border-color:rgba(124,108,255,0.3);transform:translateY(-3px)}
-.stat-card:hover::before{opacity:1}
-.stat-num{font-size:1.8rem;font-weight:900;background:linear-gradient(135deg,var(--primary2),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;position:relative}
-.stat-label{font-size:0.72rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-top:2px}
+      /* STATS */
+      .stats-bar {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin-bottom: 28px;
+      }
+      .stat-card {
+        background: var(--surface);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        padding: 18px;
+        text-align: center;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+      .stat-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(124, 108, 255, 0.05),
+          transparent
+        );
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .stat-card:hover {
+        border-color: rgba(124, 108, 255, 0.3);
+        transform: translateY(-3px);
+      }
+      .stat-card:hover::before {
+        opacity: 1;
+      }
+      .stat-num {
+        font-size: 1.8rem;
+        font-weight: 900;
+        background: linear-gradient(135deg, var(--primary2), var(--accent));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+      }
+      .stat-label {
+        font-size: 0.72rem;
+        color: var(--text3);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 2px;
+      }
 
-/* SECTIONS */
-section{
-  background:var(--surface);backdrop-filter:blur(10px);
-  border:1px solid var(--border);border-radius:var(--radius);
-  padding:32px;margin-bottom:24px;transition:all .3s;
-}
-section:hover{border-color:rgba(124,108,255,0.15)}
-.section-header{
-  display:flex;align-items:center;gap:10px;margin-bottom:20px;
-  padding-bottom:14px;border-bottom:1px solid var(--border);
-}
-.section-header .s-icon{
-  width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;
-  font-size:1.1rem;background:linear-gradient(135deg,rgba(124,108,255,0.15),rgba(34,211,238,0.1));
-  border:1px solid rgba(124,108,255,0.2);
-}
-.section-header h2{font-size:1.1rem;font-weight:700;letter-spacing:-0.3px}
+      /* SECTIONS */
+      section {
+        background: var(--surface);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 32px;
+        margin-bottom: 24px;
+        transition: all 0.3s;
+      }
+      section:hover {
+        border-color: rgba(124, 108, 255, 0.15);
+      }
+      .section-header {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--border);
+      }
+      .section-header .s-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        background: linear-gradient(
+          135deg,
+          rgba(124, 108, 255, 0.15),
+          rgba(34, 211, 238, 0.1)
+        );
+        border: 1px solid rgba(124, 108, 255, 0.2);
+      }
+      .section-header h2 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+      }
 
-/* PROJECT CARDS */
-.projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 24px; }
-@media(max-width: 768px) { .projects-grid { grid-template-columns: 1fr; } }
+      /* PROJECT CARDS */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+      @media (max-width: 768px) {
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+      }
 
-.project{
-  background:linear-gradient(135deg,rgba(129,140,248,0.06),rgba(34,211,238,0.03));
-  border:1px solid rgba(129,140,248,0.12);border-radius:var(--radius-sm);
-  padding:22px;transition:all .4s;position:relative;overflow:hidden;
-  display:flex;flex-direction:column;
-}
-.project::after{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--primary),var(--accent));border-radius:3px}
-.project:hover{border-color:rgba(129,140,248,0.3);transform:translateX(4px);box-shadow:0 8px 30px rgba(129,140,248,0.08)}
-.project h3{font-size:0.95rem;font-weight:700;color:var(--primary2);margin-bottom:3px}
-.project .tech{color:var(--accent2);font-size:0.78rem;margin-bottom:8px;font-weight:500}
-.project p{color:var(--text2);font-size:0.85rem;margin-bottom:12px;flex-grow:1}
-.project .badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
-.badge{
-  background:rgba(129,140,248,0.1);border:1px solid rgba(129,140,248,0.2);
-  border-radius:6px;padding:3px 10px;font-size:0.7rem;font-weight:600;color:var(--primary2);
-}
-.project .btns{display:flex;gap:8px;margin-top:auto}
+      .project {
+        background: linear-gradient(
+          135deg,
+          rgba(129, 140, 248, 0.06),
+          rgba(34, 211, 238, 0.03)
+        );
+        border: 1px solid rgba(129, 140, 248, 0.12);
+        border-radius: var(--radius-sm);
+        padding: 22px;
+        transition: all 0.4s;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      .project::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(180deg, var(--primary), var(--accent));
+        border-radius: 3px;
+      }
+      .project:hover {
+        border-color: rgba(129, 140, 248, 0.3);
+        transform: translateX(4px);
+        box-shadow: 0 8px 30px rgba(129, 140, 248, 0.08);
+      }
+      .project h3 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--primary2);
+        margin-bottom: 3px;
+      }
+      .project .tech {
+        color: var(--accent2);
+        font-size: 0.78rem;
+        margin-bottom: 8px;
+        font-weight: 500;
+      }
+      .project p {
+        color: var(--text2);
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+        flex-grow: 1;
+      }
+      .project .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 12px;
+      }
+      .badge {
+        background: rgba(129, 140, 248, 0.1);
+        border: 1px solid rgba(129, 140, 248, 0.2);
+        border-radius: 6px;
+        padding: 3px 10px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: var(--primary2);
+      }
+      .project .btns {
+        display: flex;
+        gap: 8px;
+        margin-top: auto;
+      }
 
-/* CURSOR SPOTLIGHT EFFECT */
-.project, .stat-card, .value-card, .cert { position: relative; overflow: hidden; }
-.project::before, .stat-card::before, .value-card::before, .cert::before {
-  content: ''; position: absolute;
-  top: var(--mouse-y, -100px); left: var(--mouse-x, -100px);
-  width: 300px; height: 300px;
-  background: radial-gradient(circle, rgba(129,140,248,0.15) 0%, transparent 60%);
-  border-radius: 50%; transform: translate(-50%, -50%);
-  pointer-events: none; opacity: 0; transition: opacity 0.3s; z-index: 0;
-}
-.project:hover::before, .stat-card:hover::before, .value-card:hover::before, .cert:hover::before { opacity: 1; }
-.project *, .stat-card *, .value-card *, .cert * { position: relative; z-index: 1; }
+      /* CURSOR SPOTLIGHT EFFECT */
+      .project,
+      .stat-card,
+      .value-card,
+      .cert {
+        position: relative;
+        overflow: hidden;
+      }
+      .project::before,
+      .stat-card::before,
+      .value-card::before,
+      .cert::before {
+        content: "";
+        position: absolute;
+        top: var(--mouse-y, -100px);
+        left: var(--mouse-x, -100px);
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(
+          circle,
+          rgba(129, 140, 248, 0.15) 0%,
+          transparent 60%
+        );
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 0;
+      }
+      .project:hover::before,
+      .stat-card:hover::before,
+      .value-card:hover::before,
+      .cert:hover::before {
+        opacity: 1;
+      }
+      .project *,
+      .stat-card *,
+      .value-card *,
+      .cert * {
+        position: relative;
+        z-index: 1;
+      }
 
-/* BUTTONS */
-.btn{
-  display:inline-flex;align-items:center;gap:5px;
-  border-radius:8px;padding:7px 16px;font-size:0.8rem;font-weight:600;
-  transition:all .3s;cursor:pointer;border:1px solid var(--border);
-  background:var(--surface2);color:var(--text);
-}
-.btn:hover{transform:translateY(-2px);box-shadow:0 4px 15px rgba(0,0,0,0.2)}
-.btn.glow{
-  background:linear-gradient(135deg,var(--primary),#5b4fcf);
-  border-color:var(--primary);color:#fff;
-}
-.btn.glow:hover{box-shadow:0 4px 20px rgba(124,108,255,0.4)}
+      /* BUTTONS */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        border-radius: 8px;
+        padding: 7px 16px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        transition: all 0.3s;
+        cursor: pointer;
+        border: 1px solid var(--border);
+        background: var(--surface2);
+        color: var(--text);
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+      .btn.glow {
+        background: linear-gradient(135deg, var(--primary), #5b4fcf);
+        border-color: var(--primary);
+        color: #fff;
+      }
+      .btn.glow:hover {
+        box-shadow: 0 4px 20px rgba(124, 108, 255, 0.4);
+      }
 
-/* SKILLS */
-.skill-group{margin-bottom:18px}
-.skill-group:last-child{margin-bottom:0}
-.skill-group-title{font-size:0.78rem;font-weight:700;color:var(--primary2);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px; border-bottom: 1px solid rgba(124,108,255,0.2); padding-bottom: 5px; display: inline-block;}
-.skill-items{display:flex;flex-wrap:wrap;gap:6px}
-.skill{
-  background:rgba(255,255,255,0.04);border:1px solid var(--border);
-  border-radius:8px;padding:6px 14px;font-size:0.78rem;color:var(--text2);
-  transition:all .3s;position:relative;overflow:hidden;
-}
-.skill::before{content:'';position:absolute;bottom:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--primary),var(--accent));transition:width .4s}
-.skill:hover{border-color:rgba(124,108,255,0.3);color:var(--text);transform:translateY(-2px)}
-.skill:hover::before{width:100%}
-.skill.hot{background:rgba(124,108,255,0.1);border-color:rgba(124,108,255,0.25);color:var(--primary2);font-weight:600}
-.skill.hot:hover{box-shadow: 0 4px 15px rgba(124,108,255,0.3); border-color:var(--primary); color:#fff;}
+      /* SKILLS */
+      .skill-group {
+        margin-bottom: 18px;
+      }
+      .skill-group:last-child {
+        margin-bottom: 0;
+      }
+      .skill-group-title {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--primary2);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 12px;
+        border-bottom: 1px solid rgba(124, 108, 255, 0.2);
+        padding-bottom: 5px;
+        display: inline-block;
+      }
+      .skill-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .skill {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 6px 14px;
+        font-size: 0.78rem;
+        color: var(--text2);
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+      .skill::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 0;
+        background: linear-gradient(90deg, var(--primary), var(--accent));
+        transition: width 0.4s;
+      }
+      .skill:hover {
+        border-color: rgba(124, 108, 255, 0.3);
+        color: var(--text);
+        transform: translateY(-2px);
+      }
+      .skill:hover::before {
+        width: 100%;
+      }
+      .skill.hot {
+        background: rgba(124, 108, 255, 0.1);
+        border-color: rgba(124, 108, 255, 0.25);
+        color: var(--primary2);
+        font-weight: 600;
+      }
+      .skill.hot:hover {
+        box-shadow: 0 4px 15px rgba(124, 108, 255, 0.3);
+        border-color: var(--primary);
+        color: #fff;
+      }
 
-/* VALUE CARDS */
-.value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.value-card{
-  background:rgba(255,255,255,0.02);border:1px solid var(--border);
-  border-radius:var(--radius-sm);padding:20px;text-align:center;transition:all .4s;
-}
-.value-card:hover{border-color:rgba(124,108,255,0.3);transform:translateY(-4px);background:rgba(124,108,255,0.04)}
-.value-card .v-icon{font-size:1.6rem;margin-bottom:8px}
-.value-card .v-title{font-size:0.82rem;font-weight:700;margin-bottom:4px;color:var(--text)}
-.value-card .v-desc{font-size:0.72rem;color:var(--text3);line-height:1.5}
+      /* VALUE CARDS */
+      .value-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      .value-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        padding: 20px;
+        text-align: center;
+        transition: all 0.4s;
+      }
+      .value-card:hover {
+        border-color: rgba(124, 108, 255, 0.3);
+        transform: translateY(-4px);
+        background: rgba(124, 108, 255, 0.04);
+      }
+      .value-card .v-icon {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+      }
+      .value-card .v-title {
+        font-size: 0.82rem;
+        font-weight: 700;
+        margin-bottom: 4px;
+        color: var(--text);
+      }
+      .value-card .v-desc {
+        font-size: 0.72rem;
+        color: var(--text3);
+        line-height: 1.5;
+      }
 
-/* CERTS */
-.cert-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.cert{
-  background:rgba(255,255,255,0.02);border:1px solid var(--border);
-  border-radius:var(--radius-sm);padding:16px;text-align:center;transition:all .3s;
-}
-.cert:hover{border-color:var(--accent2);transform:translateY(-3px)}
-.cert .c-icon{font-size:1.4rem;margin-bottom:6px}
-.cert .c-name{font-size:0.82rem;font-weight:700}
-.cert .c-org{font-size:0.7rem;color:var(--text3);margin-top:2px}
-.cert .c-status{
-  display:inline-block;margin-top:6px;padding:2px 8px;border-radius:10px;
-  font-size:0.65rem;font-weight:600;
-  background:rgba(251,191,36,0.1);color:var(--warn);border:1px solid rgba(251,191,36,0.2);
-}
+      /* CERTS */
+      .cert-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+      .cert {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        padding: 16px;
+        text-align: center;
+        transition: all 0.3s;
+      }
+      .cert:hover {
+        border-color: var(--accent2);
+        transform: translateY(-3px);
+      }
+      .cert .c-icon {
+        font-size: 1.4rem;
+        margin-bottom: 6px;
+      }
+      .cert .c-name {
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+      .cert .c-org {
+        font-size: 0.7rem;
+        color: var(--text3);
+        margin-top: 2px;
+      }
+      .cert .c-status {
+        display: inline-block;
+        margin-top: 6px;
+        padding: 2px 8px;
+        border-radius: 10px;
+        font-size: 0.65rem;
+        font-weight: 600;
+        background: rgba(251, 191, 36, 0.1);
+        color: var(--warn);
+        border: 1px solid rgba(251, 191, 36, 0.2);
+      }
 
-/* LINKS */
-.links-grid{display:flex;flex-wrap:wrap;gap:10px}
+      /* LINKS */
+      .links-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
 
-/* FOOTER */
-.footer{text-align:center;color:var(--text3);font-size:0.75rem;padding:24px;letter-spacing:0.5px}
+      /* FOOTER */
+      .footer {
+        text-align: center;
+        color: var(--text3);
+        font-size: 0.75rem;
+        padding: 24px;
+        letter-spacing: 0.5px;
+      }
 
-/* ANIMATIONS */
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.fade-up{animation:fadeUp .6s ease-out both}
-.d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}
-.d4{animation-delay:.4s}.d5{animation-delay:.5s}.d6{animation-delay:.6s}
+      /* ANIMATIONS */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-up {
+        animation: fadeUp 0.6s ease-out both;
+      }
+      .d1 {
+        animation-delay: 0.1s;
+      }
+      .d2 {
+        animation-delay: 0.2s;
+      }
+      .d3 {
+        animation-delay: 0.3s;
+      }
+      .d4 {
+        animation-delay: 0.4s;
+      }
+      .d5 {
+        animation-delay: 0.5s;
+      }
+      .d6 {
+        animation-delay: 0.6s;
+      }
 
-/* PROGRESS BAR & FAB */
-.c-progress-wrap { margin-top: 10px; text-align: left; }
-.c-progress-wrap .c-status { display: flex; justify-content: space-between; font-size: 0.65rem; color: var(--warn); margin-bottom: 5px; font-weight: 600; }
-.c-progress-bar { width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
-.c-progress { height: 100%; background: linear-gradient(90deg, var(--warn), #f59e0b); border-radius: 10px; transition: width 1s ease-out; }
+      /* PROGRESS BAR & FAB */
+      .c-progress-wrap {
+        margin-top: 10px;
+        text-align: left;
+      }
+      .c-progress-wrap .c-status {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.65rem;
+        color: var(--warn);
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+      .c-progress-bar {
+        width: 100%;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .c-progress {
+        height: 100%;
+        background: linear-gradient(90deg, var(--warn), #f59e0b);
+        border-radius: 10px;
+        transition: width 1s ease-out;
+      }
 
-.fab-print {
-  position: fixed; bottom: 30px; right: 30px; z-index: 99;
-  background: linear-gradient(135deg, var(--primary), #5b4fcf);
-  color: #fff; width: 55px; height: 55px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.5rem; cursor: pointer; border: none;
-  box-shadow: 0 8px 25px rgba(129,140,248,0.4); transition: all 0.3s;
-}
-.fab-print:hover { transform: scale(1.1) translateY(-5px); box-shadow: 0 12px 30px rgba(129,140,248,0.6); }
-.print-qr-code { display: none; }
+      .fab-print {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 99;
+        background: linear-gradient(135deg, var(--primary), #5b4fcf);
+        color: #fff;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 8px 25px rgba(129, 140, 248, 0.4);
+        transition: all 0.3s;
+      }
+      .fab-print:hover {
+        transform: scale(1.1) translateY(-5px);
+        box-shadow: 0 12px 30px rgba(129, 140, 248, 0.6);
+      }
+      .print-qr-code {
+        display: none;
+      }
 
-/* PRINT */
-@media print{
-  body{background:#fff;color:#1e293b;font-size:10pt}
-  .bg-grid,.bg-glow,.no-print, .fab-print {display:none!important}
-  .container{max-width:100%;padding:0}
-  section,.hero,.stat-card,.project,.cert,.value-card{
-    background:#f8fafc!important;border-color:#e2e8f0!important;
-    backdrop-filter:none!important;box-shadow:none!important;
-  }
-  .skill{background:#f1f5f9!important;border-color:#cbd5e1!important;color:#334155!important}
-  a{color:#1e293b!important}
-  .stat-num,.hero-text h1 span{-webkit-text-fill-color:#4338ca!important}
-  .c-progress-bar { background: #e2e8f0 !important; }
-  .c-progress { background: #f59e0b !important; }
-  .pill.primary { border-color: #cbd5e1 !important; color: #1e293b !important; box-shadow: none !important; }
-  .print-qr-code { display: block !important; position: absolute; top: 30px; right: 30px; text-align: center; }
-  .print-qr-code img { width: 80px; height: 80px; border-radius: 8px; border: 1px solid #e2e8f0; }
-  .print-qr-code p { font-size: 0.65rem; color: #64748b; margin-top: 4px; font-weight: 600; }
-}
+      /* PRINT */
+      @media print {
+        body {
+          background: #fff;
+          color: #1e293b;
+          font-size: 10pt;
+        }
+        .bg-grid,
+        .bg-glow,
+        .no-print,
+        .fab-print {
+          display: none !important;
+        }
+        .container {
+          max-width: 100%;
+          padding: 0;
+        }
+        section,
+        .hero,
+        .stat-card,
+        .project,
+        .cert,
+        .value-card {
+          background: #f8fafc !important;
+          border-color: #e2e8f0 !important;
+          backdrop-filter: none !important;
+          box-shadow: none !important;
+        }
+        .skill {
+          background: #f1f5f9 !important;
+          border-color: #cbd5e1 !important;
+          color: #334155 !important;
+        }
+        a {
+          color: #1e293b !important;
+        }
+        .stat-num,
+        .hero-text h1 span {
+          -webkit-text-fill-color: #4338ca !important;
+        }
+        .c-progress-bar {
+          background: #e2e8f0 !important;
+        }
+        .c-progress {
+          background: #f59e0b !important;
+        }
+        .pill.primary {
+          border-color: #cbd5e1 !important;
+          color: #1e293b !important;
+          box-shadow: none !important;
+        }
+        .print-qr-code {
+          display: block !important;
+          position: absolute;
+          top: 30px;
+          right: 30px;
+          text-align: center;
+        }
+        .print-qr-code img {
+          width: 80px;
+          height: 80px;
+          border-radius: 8px;
+          border: 1px solid #e2e8f0;
+        }
+        .print-qr-code p {
+          font-size: 0.65rem;
+          color: #64748b;
+          margin-top: 4px;
+          font-weight: 600;
+        }
+      }
 
-@media(max-width:640px){
-  .container{padding:16px 12px}
-  .hero{padding:28px 20px}
-  .hero-inner{flex-direction:column;text-align:center}
-  .hero-text h1{font-size:1.6rem}
-  .contact-pills{justify-content:center}
-  .stats-bar{grid-template-columns:repeat(2,1fr)}
-  .value-grid{grid-template-columns:1fr}
-  .cert-row{grid-template-columns:1fr}
-  section{padding:22px 18px}
-}
-</style>
-</head>
-<body>
+      @media (max-width: 640px) {
+        .container {
+          padding: 16px 12px;
+        }
+        .hero {
+          padding: 28px 20px;
+        }
+        .hero-inner {
+          flex-direction: column;
+          text-align: center;
+        }
+        .hero-text h1 {
+          font-size: 1.6rem;
+        }
+        .contact-pills {
+          justify-content: center;
+        }
+        .stats-bar {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .value-grid {
+          grid-template-columns: 1fr;
+        }
+        .cert-row {
+          grid-template-columns: 1fr;
+        }
+        section {
+          padding: 22px 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <div class="bg-glow g1"></div>
+    <div class="bg-glow g2"></div>
 
-<div class="bg-grid"></div>
-<div class="bg-glow g1"></div>
-<div class="bg-glow g2"></div>
+    <div class="container">
+      <!-- HERO -->
+      <div class="hero fade-up">
+        <div class="hero-inner">
+          <img src="./pro2.png" alt="RoMEoTOTO" class="avatar" />
+          <div class="hero-text">
+            <h1><span>RoMEoTOTO</span></h1>
+            <div class="role">IT Support Specialist &amp; AI Developer</div>
+            <div class="tagline">
+              สาย IT ที่ชอบจับ AI มาทำระบบออโต้ ช่วยทีมจัดการ Ticket ซ้ำๆ
+              จะได้เลิกปวดหัวแล้วกลับบ้านตรงเวลา
+            </div>
+            <div class="contact-pills">
+              <span class="pill">📍 Bangkok</span>
+              <a
+                href="https://github.com/romeototo"
+                class="pill primary"
+                target="_blank"
+                >🐙 GitHub</a
+              >
+              <a href="https://x.com/RoMeoT0T0" class="pill" target="_blank"
+                >𝕏 @RoMeoT0T0</a
+              >
+              <a
+                href="https://romeototo.github.io/portfolio-website/"
+                class="pill primary"
+                target="_blank"
+                >🌐 Portfolio</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="print-qr-code">
+          <img src="resume_qr.png" alt="QR Code" />
+          <p>Scan to view<br />Interactive Resume</p>
+        </div>
+      </div>
 
-<div class="container">
+      <!-- STATS -->
+      <div class="stats-bar fade-up d1">
+        <div class="stat-card">
+          <div class="stat-num">222</div>
+          <div class="stat-label">FAQ Built</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">50</div>
+          <div class="stat-label">Categories</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">7+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">40%</div>
+          <div class="stat-label">Ticket Reduced</div>
+        </div>
+      </div>
 
-<!-- HERO -->
-<div class="hero fade-up">
-<div class="hero-inner">
-  <img src="./pro2.png" alt="RoMEoTOTO" class="avatar">
-  <div class="hero-text">
-    <h1><span>RoMEoTOTO</span></h1>
-    <div class="role">IT Support Specialist &amp; AI Developer</div>
-    <div class="tagline">สาย IT ที่ชอบจับ AI มาทำระบบออโต้ ช่วยทีมจัดการ Ticket ซ้ำๆ จะได้เลิกปวดหัวแล้วกลับบ้านตรงเวลา</div>
-    <div class="contact-pills">
-      <span class="pill">📍 Bangkok</span>
-      <a href="https://github.com/romeototo" class="pill primary" target="_blank">🐙 GitHub</a>
-      <a href="https://x.com/RoMeoT0T0" class="pill" target="_blank">𝕏 @RoMeoT0T0</a>
-      <a href="https://romeototo.github.io/portfolio-website/" class="pill primary" target="_blank">🌐 Portfolio</a>
+      <!-- VALUE PROPOSITION -->
+      <section class="fade-up d2">
+        <div class="section-header">
+          <div class="s-icon">💡</div>
+          <h2>What I Bring</h2>
+        </div>
+        <div class="value-grid">
+          <div class="value-card">
+            <div class="v-icon">🔧</div>
+            <div class="v-title">Problem Solver</div>
+            <div class="v-desc">
+              ชอบแก้ปัญหา IT ให้จบที่ต้นตอ ทำฐานข้อมูล FAQ ไว้กว่า 220
+              ข้อให้คนเข้ามาค้นหาคำตอบได้ง่ายๆ
+            </div>
+          </div>
+          <div class="value-card">
+            <div class="v-icon">🤖</div>
+            <div class="v-title">AI Builder</div>
+            <div class="v-desc">
+              เขียนบอทและระบบออโต้ด้วย Python กับ Gemini API
+              เอามาใช้ทำงานได้จริง ไม่ได้มีดีแค่คุยเล่น
+            </div>
+          </div>
+          <div class="value-card">
+            <div class="v-icon">⚡</div>
+            <div class="v-title">Efficiency Booster</div>
+            <div class="v-desc">
+              สายลดงานถึก สร้างระบบให้คนเคลียร์ปัญหาเบื้องต้นเองได้
+              ทีมจะได้ไม่ต้องเหนื่อยกับเรื่องเดิมๆ
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="fade-up d3">
+        <div class="section-header">
+          <div class="s-icon">🚀</div>
+          <h2>Featured Projects</h2>
+        </div>
+        <div class="projects-grid">
+          <div class="project">
+            <h3>📋 AI-Powered Kanban Board</h3>
+            <div class="tech">
+              Vanilla JS • Firebase Auth & Firestore • Google Gemini 2.5
+            </div>
+            <p>
+              โปรดักทิวิตี้บอร์ดที่ลากการ์ดสลับช่องได้ทั้งบนคอมและมือถือ
+              มีระบบล็อคอินแยกกระดานใครกระดานมัน แถมฝัง AI
+              ไว้คอยช่วยคิดแตกงานใหญ่ๆ และให้คำแนะนำเหมือนมีโค้ชส่วนตัว
+            </p>
+            <div class="badges">
+              <span class="badge">Gemini AI Coach</span>
+              <span class="badge">Firebase Real-time</span>
+              <span class="badge">Google Auth</span>
+              <span class="badge">Mobile Touch Support</span>
+            </div>
+            <div class="btns">
+              <a
+                href="https://romeototo.github.io/ai-kanban-board/"
+                target="_blank"
+                class="btn glow"
+                >🔗 Live Demo</a
+              >
+              <a
+                href="https://github.com/romeototo/ai-kanban-board"
+                target="_blank"
+                class="btn"
+                >📦 Source</a
+              >
+            </div>
+          </div>
+
+          <div class="project">
+            <h3>🖥 IT Support AI Chatbot</h3>
+            <div class="tech">
+              Python • Flask • Google Gemini API • JavaScript
+            </div>
+            <p>
+              แชทบอทถามตอบปัญหา IT ที่ช่วยลดภาระให้ทีม คอยตอบคำถามกวนใจซ้ำๆ
+              อัตโนมัติ มีระบบหลังบ้านไว้ดูสถิติว่าคนชอบมีปัญหาเรื่องอะไรเยอะสุด
+            </p>
+            <div class="badges">
+              <span class="badge">222 FAQ</span>
+              <span class="badge">50 Categories</span>
+              <span class="badge">Gemini AI</span>
+              <span class="badge">Dark/Light Mode</span>
+              <span class="badge">Ticket System</span>
+            </div>
+            <div class="btns">
+              <a
+                href="https://romeototo.github.io/it-support-chatbot/"
+                target="_blank"
+                class="btn glow"
+                >🔗 Live Demo</a
+              >
+              <a
+                href="https://github.com/romeototo/it-support-chatbot"
+                target="_blank"
+                class="btn"
+                >📦 Source</a
+              >
+            </div>
+          </div>
+
+          <div class="project">
+            <h3>🤖 Telegram AI IT Automation Agent</h3>
+            <div class="tech">Python • Gemini AI • Telegram Bot API</div>
+            <p>
+              ผู้ช่วย AI สั่งงานผ่าน Telegram ที่แสนจะฉลาด คิดแผนงาน IT
+              เป็นสเต็ปๆ ให้เราได้
+              แถมมีระบบป้องกันความปลอดภัยไม่ให้มันไปเผลอทำระบบพัง
+            </p>
+            <div class="badges">
+              <span class="badge">Gemini Planner</span>
+              <span class="badge">Safety Guardrails</span>
+              <span class="badge">Audit Log</span>
+            </div>
+            <div class="btns">
+              <a
+                href="https://github.com/romeototo/telegram-ai-it-automation-agent"
+                target="_blank"
+                class="btn"
+                >📦 Source</a
+              >
+            </div>
+          </div>
+
+          <div class="project">
+            <h3>🎮 Web Games — Rialo Tycoon &amp; Monster Tapper</h3>
+            <div class="tech">
+              JavaScript (ES6+) • HTML5/CSS3 • Local Storage
+            </div>
+            <p>
+              มินิเกมแนว Idle/Clicker ที่ออกแบบด้วยเทคนิค Glassmorphism และ Web3
+              aesthetic โชว์การจัดการ DOM, แอนิเมชัน, และระบบ Save state
+              อย่างเต็มรูปแบบ
+            </p>
+            <div class="btns">
+              <a
+                href="https://romeototo.github.io/ai-tycoon-rialo-game/"
+                target="_blank"
+                class="btn"
+                >🎮 Play Tycoon</a
+              >
+              <a
+                href="https://romeototo.github.io/monster-tapper/"
+                target="_blank"
+                class="btn"
+                >👾 Play Monster</a
+              >
+            </div>
+          </div>
+
+          <div class="project">
+            <h3>📊 Developer Dashboard</h3>
+            <div class="tech">HTML5 • CSS3 • GitHub Pages</div>
+            <p>
+              ศูนย์บัญชาการส่วนตัวแบบเรียลไทม์ ดึงข้อมูลสถิติจากบัญชี GitHub และ
+              X (Twitter) มาแสดงผล พร้อมระบบ Task Management ในหน้าเดียว
+            </p>
+            <div class="badges">
+              <span class="badge">API Integration</span>
+              <span class="badge">Task Tracker</span>
+              <span class="badge">Responsive UI</span>
+            </div>
+            <div class="btns">
+              <a
+                href="https://romeototo.github.io/dev-dashboard/"
+                target="_blank"
+                class="btn glow"
+                >🔗 Live Demo</a
+              >
+              <a
+                href="https://github.com/romeototo/dev-dashboard"
+                target="_blank"
+                class="btn"
+                >📦 Source</a
+              >
+            </div>
+          </div>
+
+          <div class="project">
+            <h3>🌐 Professional Portfolio</h3>
+            <div class="tech">HTML5 • CSS3 • JavaScript</div>
+            <p>
+              เว็บไซต์นำเสนอผลงานระดับโปรเฟสชันนัล ออกแบบด้วยแนวคิด Premium Dark
+              Mode และ Glassmorphism เน้นความเร็วและ SEO
+            </p>
+            <div class="badges">
+              <span class="badge">Premium UI</span>
+              <span class="badge">Dark Mode</span>
+              <span class="badge">SEO Optimized</span>
+            </div>
+            <div class="btns">
+              <a
+                href="https://romeototo.github.io/portfolio-website/"
+                target="_blank"
+                class="btn glow"
+                >🔗 Live Demo</a
+              >
+              <a
+                href="https://github.com/romeototo/portfolio-website"
+                target="_blank"
+                class="btn"
+                >📦 Source</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="fade-up d4">
+        <div class="section-header">
+          <div class="s-icon">🛠</div>
+          <h2>Technical Skills</h2>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">🖥️ IT Support & Infrastructure</div>
+          <div class="skill-items">
+            <span class="skill hot">🔧 Troubleshooting</span>
+            <span class="skill hot">🔑 Active Directory</span>
+            <span class="skill hot">☁️ Office 365</span>
+            <span class="skill">🌐 VPN / Remote Desktop</span>
+            <span class="skill">📡 DNS / DHCP / TCP-IP</span>
+            <span class="skill">🪟 Windows Server</span>
+            <span class="skill">📜 Group Policy</span>
+            <span class="skill">🖨️ Print Management</span>
+            <span class="skill">🔐 MFA / Security</span>
+            <span class="skill">🛡️ PDPA Compliance</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">💻 Programming & Development</div>
+          <div class="skill-items">
+            <span class="skill hot">🐍 Python</span>
+            <span class="skill hot">⚡ JavaScript (ES6+)</span>
+            <span class="skill">🎨 HTML5 / CSS3</span>
+            <span class="skill">🌶️ Flask</span>
+            <span class="skill">🔗 REST API</span>
+            <span class="skill">💾 JSON / SQL</span>
+            <span class="skill">🐙 Git / GitHub</span>
+            <span class="skill">🌍 GitHub Pages</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">🤖 AI & Automation</div>
+          <div class="skill-items">
+            <span class="skill hot">✨ Google Gemini API</span>
+            <span class="skill">🧠 NLP / Keyword Matching</span>
+            <span class="skill">💬 Chatbot Development</span>
+            <span class="skill">💻 PowerShell Scripting</span>
+            <span class="skill">✈️ Telegram Bot API</span>
+            <span class="skill">⚙️ Process Automation</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTS -->
+      <section class="fade-up d5">
+        <div class="section-header">
+          <div class="s-icon">🎓</div>
+          <h2>Certificates &amp; Learning</h2>
+        </div>
+        <div class="cert-row">
+          <div class="cert">
+            <div class="c-icon">🏆</div>
+            <div class="c-name">Google IT Support</div>
+            <div class="c-org">Coursera</div>
+            <div class="c-progress-wrap">
+              <div class="c-status">
+                <span>📖 In Progress</span><span>80%</span>
+              </div>
+              <div class="c-progress-bar">
+                <div class="c-progress" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="cert">
+            <div class="c-icon">&#9729;</div>
+            <div class="c-name">Microsoft AZ-900</div>
+            <div class="c-org">Azure Fundamentals</div>
+            <div class="c-progress-wrap">
+              <div class="c-status">
+                <span>📖 In Progress</span><span>50%</span>
+              </div>
+              <div class="c-progress-bar">
+                <div class="c-progress" style="width: 50%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="cert">
+            <div class="c-icon">🔒</div>
+            <div class="c-name">Microsoft SC-900</div>
+            <div class="c-org">Security Fundamentals</div>
+            <div class="c-progress-wrap">
+              <div class="c-status">
+                <span>📖 In Progress</span><span>30%</span>
+              </div>
+              <div class="c-progress-bar">
+                <div class="c-progress" style="width: 30%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LINKS -->
+      <section class="fade-up d6">
+        <div class="section-header">
+          <div class="s-icon">🔗</div>
+          <h2>Links &amp; Portfolio</h2>
+        </div>
+        <div class="links-grid">
+          <a
+            href="https://github.com/romeototo"
+            target="_blank"
+            class="btn glow"
+            >🐙 GitHub Profile</a
+          >
+          <a
+            href="https://romeototo.github.io/ai-kanban-board/"
+            target="_blank"
+            class="btn"
+            >📋 Kanban Demo</a
+          >
+          <a
+            href="https://romeototo.github.io/it-support-chatbot/"
+            target="_blank"
+            class="btn"
+            >🖥 IT Chatbot Demo</a
+          >
+          <a
+            href="https://romeototo.github.io/portfolio-website/"
+            target="_blank"
+            class="btn"
+            >🌐 Portfolio</a
+          >
+          <a href="https://x.com/RoMeoT0T0" target="_blank" class="btn"
+            >𝕏 Twitter</a
+          >
+        </div>
+      </section>
+
+      <div class="footer no-print">
+        Built with precision by <strong>RoMEoTOTO</strong> — Bangkok, Thailand
+      </div>
     </div>
-  </div>
-</div>
-<div class="print-qr-code">
-  <img src="resume_qr.png" alt="QR Code">
-  <p>Scan to view<br>Interactive Resume</p>
-</div>
-</div>
 
-<!-- STATS -->
-<div class="stats-bar fade-up d1">
-  <div class="stat-card"><div class="stat-num">222</div><div class="stat-label">FAQ Built</div></div>
-  <div class="stat-card"><div class="stat-num">50</div><div class="stat-label">Categories</div></div>
-  <div class="stat-card"><div class="stat-num">7+</div><div class="stat-label">Projects</div></div>
-  <div class="stat-card"><div class="stat-num">40%</div><div class="stat-label">Ticket Reduced</div></div>
-</div>
+    <!-- Floating Action Button -->
+    <button class="fab-print" onclick="window.print()" title="Save as PDF">
+      🖨️
+    </button>
 
-<!-- VALUE PROPOSITION -->
-<section class="fade-up d2">
-<div class="section-header">
-  <div class="s-icon">💡</div>
-  <h2>What I Bring</h2>
-</div>
-<div class="value-grid">
-  <div class="value-card">
-    <div class="v-icon">🔧</div>
-    <div class="v-title">Problem Solver</div>
-    <div class="v-desc">ชอบแก้ปัญหา IT ให้จบที่ต้นตอ ทำฐานข้อมูล FAQ ไว้กว่า 220 ข้อให้คนเข้ามาค้นหาคำตอบได้ง่ายๆ</div>
-  </div>
-  <div class="value-card">
-    <div class="v-icon">🤖</div>
-    <div class="v-title">AI Builder</div>
-    <div class="v-desc">เขียนบอทและระบบออโต้ด้วย Python กับ Gemini API เอามาใช้ทำงานได้จริง ไม่ได้มีดีแค่คุยเล่น</div>
-  </div>
-  <div class="value-card">
-    <div class="v-icon">⚡</div>
-    <div class="v-title">Efficiency Booster</div>
-    <div class="v-desc">สายลดงานถึก สร้างระบบให้คนเคลียร์ปัญหาเบื้องต้นเองได้ ทีมจะได้ไม่ต้องเหนื่อยกับเรื่องเดิมๆ</div>
-  </div>
-</div>
-</section>
+    <script>
+      // Intersection Observer for scroll animations
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.style.opacity = "1";
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document.querySelectorAll(".fade-up").forEach((el) => obs.observe(el));
 
-<!-- PROJECTS -->
-<section class="fade-up d3">
-<div class="section-header">
-  <div class="s-icon">🚀</div>
-  <h2>Featured Projects</h2>
-</div>
-<div class="projects-grid">
+      // Cursor Spotlight Effect
+      document
+        .querySelectorAll(".project, .stat-card, .value-card, .cert")
+        .forEach((card) => {
+          card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty("--mouse-x", `${x}px`);
+            card.style.setProperty("--mouse-y", `${y}px`);
+          });
+        });
 
-<div class="project">
-  <h3>📋 AI-Powered Kanban Board</h3>
-  <div class="tech">Vanilla JS • Firebase Auth & Firestore • Google Gemini 2.5</div>
-  <p>โปรดักทิวิตี้บอร์ดที่ลากการ์ดสลับช่องได้ทั้งบนคอมและมือถือ มีระบบล็อคอินแยกกระดานใครกระดานมัน แถมฝัง AI ไว้คอยช่วยคิดแตกงานใหญ่ๆ และให้คำแนะนำเหมือนมีโค้ชส่วนตัว</p>
-  <div class="badges">
-    <span class="badge">Gemini AI Coach</span>
-    <span class="badge">Firebase Real-time</span>
-    <span class="badge">Google Auth</span>
-    <span class="badge">Mobile Touch Support</span>
-  </div>
-  <div class="btns">
-    <a href="https://romeototo.github.io/ai-kanban-board/" target="_blank" class="btn glow">🔗 Live Demo</a>
-    <a href="https://github.com/romeototo/ai-kanban-board" target="_blank" class="btn">📦 Source</a>
-  </div>
-</div>
-
-<div class="project">
-  <h3>🖥 IT Support AI Chatbot</h3>
-  <div class="tech">Python • Flask • Google Gemini API • JavaScript</div>
-  <p>แชทบอทถามตอบปัญหา IT ที่ช่วยลดภาระให้ทีม คอยตอบคำถามกวนใจซ้ำๆ อัตโนมัติ มีระบบหลังบ้านไว้ดูสถิติว่าคนชอบมีปัญหาเรื่องอะไรเยอะสุด</p>
-  <div class="badges">
-    <span class="badge">222 FAQ</span>
-    <span class="badge">50 Categories</span>
-    <span class="badge">Gemini AI</span>
-    <span class="badge">Dark/Light Mode</span>
-    <span class="badge">Ticket System</span>
-  </div>
-  <div class="btns">
-    <a href="https://romeototo.github.io/it-support-chatbot/" target="_blank" class="btn glow">🔗 Live Demo</a>
-    <a href="https://github.com/romeototo/it-support-chatbot" target="_blank" class="btn">📦 Source</a>
-  </div>
-</div>
-
-<div class="project">
-  <h3>🤖 Telegram AI IT Automation Agent</h3>
-  <div class="tech">Python • Gemini AI • Telegram Bot API</div>
-  <p>ผู้ช่วย AI สั่งงานผ่าน Telegram ที่แสนจะฉลาด คิดแผนงาน IT เป็นสเต็ปๆ ให้เราได้ แถมมีระบบป้องกันความปลอดภัยไม่ให้มันไปเผลอทำระบบพัง</p>
-  <div class="badges">
-    <span class="badge">Gemini Planner</span>
-    <span class="badge">Safety Guardrails</span>
-    <span class="badge">Audit Log</span>
-  </div>
-  <div class="btns">
-    <a href="https://github.com/romeototo/telegram-ai-it-automation-agent" target="_blank" class="btn">📦 Source</a>
-  </div>
-</div>
-
-<div class="project">
-  <h3>🎮 Web Games — Rialo Tycoon &amp; Monster Tapper</h3>
-  <div class="tech">JavaScript (ES6+) • HTML5/CSS3 • Local Storage</div>
-  <p>มินิเกมแนว Idle/Clicker ที่ออกแบบด้วยเทคนิค Glassmorphism และ Web3 aesthetic โชว์การจัดการ DOM, แอนิเมชัน, และระบบ Save state อย่างเต็มรูปแบบ</p>
-  <div class="btns">
-    <a href="https://romeototo.github.io/ai-tycoon-rialo-game/" target="_blank" class="btn">🎮 Play Tycoon</a>
-    <a href="https://romeototo.github.io/monster-tapper/" target="_blank" class="btn">👾 Play Monster</a>
-  </div>
-</div>
-
-<div class="project">
-  <h3>📊 Developer Dashboard</h3>
-  <div class="tech">HTML5 • CSS3 • GitHub Pages</div>
-  <p>ศูนย์บัญชาการส่วนตัวแบบเรียลไทม์ ดึงข้อมูลสถิติจากบัญชี GitHub และ X (Twitter) มาแสดงผล พร้อมระบบ Task Management ในหน้าเดียว</p>
-  <div class="badges">
-    <span class="badge">API Integration</span>
-    <span class="badge">Task Tracker</span>
-    <span class="badge">Responsive UI</span>
-  </div>
-  <div class="btns">
-    <a href="https://romeototo.github.io/dev-dashboard/" target="_blank" class="btn glow">🔗 Live Demo</a>
-    <a href="https://github.com/romeototo/dev-dashboard" target="_blank" class="btn">📦 Source</a>
-  </div>
-</div>
-
-<div class="project">
-  <h3>🌐 Professional Portfolio</h3>
-  <div class="tech">HTML5 • CSS3 • JavaScript</div>
-  <p>เว็บไซต์นำเสนอผลงานระดับโปรเฟสชันนัล ออกแบบด้วยแนวคิด Premium Dark Mode และ Glassmorphism เน้นความเร็วและ SEO</p>
-  <div class="badges">
-    <span class="badge">Premium UI</span>
-    <span class="badge">Dark Mode</span>
-    <span class="badge">SEO Optimized</span>
-  </div>
-  <div class="btns">
-    <a href="https://romeototo.github.io/portfolio-website/" target="_blank" class="btn glow">🔗 Live Demo</a>
-    <a href="https://github.com/romeototo/portfolio-website" target="_blank" class="btn">📦 Source</a>
-  </div>
-</div>
-
-</div>
-</section>
-
-<!-- SKILLS -->
-<section class="fade-up d4">
-<div class="section-header">
-  <div class="s-icon">🛠</div>
-  <h2>Technical Skills</h2>
-</div>
-
-<div class="skill-group">
-  <div class="skill-group-title">🖥️ IT Support & Infrastructure</div>
-  <div class="skill-items">
-    <span class="skill hot">🔧 Troubleshooting</span>
-    <span class="skill hot">🔑 Active Directory</span>
-    <span class="skill hot">☁️ Office 365</span>
-    <span class="skill">🌐 VPN / Remote Desktop</span>
-    <span class="skill">📡 DNS / DHCP / TCP-IP</span>
-    <span class="skill">🪟 Windows Server</span>
-    <span class="skill">📜 Group Policy</span>
-    <span class="skill">🖨️ Print Management</span>
-    <span class="skill">🔐 MFA / Security</span>
-    <span class="skill">🛡️ PDPA Compliance</span>
-  </div>
-</div>
-
-<div class="skill-group">
-  <div class="skill-group-title">💻 Programming & Development</div>
-  <div class="skill-items">
-    <span class="skill hot">🐍 Python</span>
-    <span class="skill hot">⚡ JavaScript (ES6+)</span>
-    <span class="skill">🎨 HTML5 / CSS3</span>
-    <span class="skill">🌶️ Flask</span>
-    <span class="skill">🔗 REST API</span>
-    <span class="skill">💾 JSON / SQL</span>
-    <span class="skill">🐙 Git / GitHub</span>
-    <span class="skill">🌍 GitHub Pages</span>
-  </div>
-</div>
-
-<div class="skill-group">
-  <div class="skill-group-title">🤖 AI & Automation</div>
-  <div class="skill-items">
-    <span class="skill hot">✨ Google Gemini API</span>
-    <span class="skill">🧠 NLP / Keyword Matching</span>
-    <span class="skill">💬 Chatbot Development</span>
-    <span class="skill">💻 PowerShell Scripting</span>
-    <span class="skill">✈️ Telegram Bot API</span>
-    <span class="skill">⚙️ Process Automation</span>
-  </div>
-</div>
-</section>
-
-<!-- CERTS -->
-<section class="fade-up d5">
-<div class="section-header">
-  <div class="s-icon">🎓</div>
-  <h2>Certificates &amp; Learning</h2>
-</div>
-<div class="cert-row">
-  <div class="cert">
-    <div class="c-icon">🏆</div>
-    <div class="c-name">Google IT Support</div>
-    <div class="c-org">Coursera</div>
-    <div class="c-progress-wrap">
-      <div class="c-status"><span>📖 In Progress</span><span>80%</span></div>
-      <div class="c-progress-bar"><div class="c-progress" style="width: 80%"></div></div>
-    </div>
-  </div>
-  <div class="cert">
-    <div class="c-icon">&#9729;</div>
-    <div class="c-name">Microsoft AZ-900</div>
-    <div class="c-org">Azure Fundamentals</div>
-    <div class="c-progress-wrap">
-      <div class="c-status"><span>📖 In Progress</span><span>50%</span></div>
-      <div class="c-progress-bar"><div class="c-progress" style="width: 50%"></div></div>
-    </div>
-  </div>
-  <div class="cert">
-    <div class="c-icon">🔒</div>
-    <div class="c-name">Microsoft SC-900</div>
-    <div class="c-org">Security Fundamentals</div>
-    <div class="c-progress-wrap">
-      <div class="c-status"><span>📖 In Progress</span><span>30%</span></div>
-      <div class="c-progress-bar"><div class="c-progress" style="width: 30%"></div></div>
-    </div>
-  </div>
-</div>
-</section>
-
-<!-- LINKS -->
-<section class="fade-up d6">
-<div class="section-header">
-  <div class="s-icon">🔗</div>
-  <h2>Links &amp; Portfolio</h2>
-</div>
-<div class="links-grid">
-  <a href="https://github.com/romeototo" target="_blank" class="btn glow">🐙 GitHub Profile</a>
-  <a href="https://romeototo.github.io/ai-kanban-board/" target="_blank" class="btn">📋 Kanban Demo</a>
-  <a href="https://romeototo.github.io/it-support-chatbot/" target="_blank" class="btn">🖥 IT Chatbot Demo</a>
-  <a href="https://romeototo.github.io/portfolio-website/" target="_blank" class="btn">🌐 Portfolio</a>
-  <a href="https://x.com/RoMeoT0T0" target="_blank" class="btn">𝕏 Twitter</a>
-</div>
-</section>
-
-<div class="footer no-print">
-  Built with precision by <strong>RoMEoTOTO</strong> — Bangkok, Thailand
-</div>
-
-</div>
-
-<!-- Floating Action Button -->
-<button class="fab-print" onclick="window.print()" title="Save as PDF">🖨️</button>
-
-<script>
-// Intersection Observer for scroll animations
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.style.opacity = '1'; });
-}, {threshold: 0.1});
-document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
-
-// Cursor Spotlight Effect
-document.querySelectorAll('.project, .stat-card, .value-card, .cert').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    card.style.setProperty('--mouse-x', `${x}px`);
-    card.style.setProperty('--mouse-y', `${y}px`);
-  });
-});
-
-// Animated counters
-function animateCounters() {
-  document.querySelectorAll('.stat-num').forEach(el => {
-    const text = el.textContent.trim();
-    const hasPercent = text.includes('%');
-    const hasPlus = text.includes('+');
-    const num = parseInt(text);
-    if (isNaN(num)) return;
-    let current = 0;
-    const step = Math.max(1, Math.floor(num / 40));
-    const timer = setInterval(() => {
-      current += step;
-      if (current >= num) { current = num; clearInterval(timer); }
-      el.textContent = current + (hasPercent ? '%' : hasPlus ? '+' : '');
-    }, 30);
-  });
-}
-setTimeout(animateCounters, 500);
-</script>
-</body>
+      // Animated counters
+      function animateCounters() {
+        document.querySelectorAll(".stat-num").forEach((el) => {
+          const text = el.textContent.trim();
+          const hasPercent = text.includes("%");
+          const hasPlus = text.includes("+");
+          const num = parseInt(text);
+          if (isNaN(num)) return;
+          let current = 0;
+          const step = Math.max(1, Math.floor(num / 40));
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= num) {
+              current = num;
+              clearInterval(timer);
+            }
+            el.textContent = current + (hasPercent ? "%" : hasPlus ? "+" : "");
+          }, 30);
+        });
+      }
+      setTimeout(animateCounters, 500);
+    </script>
+  </body>
 </html>

@@ -11,9 +11,22 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![GitHub Pages](https://img.shields.io/badge/Hosted_on-GitHub_Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
 
-[**Live Interactive Demo**](https://romeototo.github.io/resume/) | [**Main Portfolio**](https://romeototo.github.io/portfolio-website/) | [**Dev Dashboard**](https://romeototo.github.io/dev-dashboard/)
+[**Live Interactive Demo**](https://romeototo.github.io/resume/) | [**PDF Download**](./romeototo-resume.pdf) | [**Main Portfolio**](https://romeototo.github.io/portfolio-website/) | [**GitHub Profile**](https://github.com/romeototo)
 
 </div>
+
+---
+
+## Project Snapshot
+
+| Item | Details |
+| ---- | ------- |
+| **Role** | Standalone interactive CV artifact linked from the profile and portfolio |
+| **Live demo** | [romeototo.github.io/resume](https://romeototo.github.io/resume/) |
+| **Stack** | HTML, CSS, JavaScript, print-friendly CSS |
+| **Output** | Web resume, PDF artifact, print-to-PDF support, and QR access |
+| **Status** | Active professional artifact |
+| **Main portfolio** | [romeototo.github.io/portfolio-website](https://romeototo.github.io/portfolio-website/) |
 
 ---
 

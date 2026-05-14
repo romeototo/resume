@@ -11,9 +11,22 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![GitHub Pages](https://img.shields.io/badge/Hosted_on-GitHub_Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
 
-[**ดูหน้าเว็บจริง**](https://romeototo.github.io/resume/) | [**Portfolio หลัก**](https://romeototo.github.io/portfolio-website/) | [**หน้าแดชบอร์ด**](https://romeototo.github.io/dev-dashboard/)
+[**ดูหน้าเว็บจริง**](https://romeototo.github.io/resume/) | [**ดาวน์โหลด PDF**](./romeototo-resume.pdf) | [**Portfolio หลัก**](https://romeototo.github.io/portfolio-website/) | [**GitHub Profile**](https://github.com/romeototo)
 
 </div>
+
+---
+
+## Project Snapshot
+
+| รายการ | รายละเอียด |
+| ------ | ----------- |
+| **บทบาท** | Interactive CV artifact ที่ลิงก์จาก profile และ portfolio หลัก |
+| **Live demo** | [romeototo.github.io/resume](https://romeototo.github.io/resume/) |
+| **Stack** | HTML, CSS, JavaScript, print-friendly CSS |
+| **Output** | Web resume, PDF artifact, print-to-PDF และ QR access |
+| **สถานะ** | Active professional artifact |
+| **Portfolio หลัก** | [romeototo.github.io/portfolio-website](https://romeototo.github.io/portfolio-website/) |
 
 ---
 

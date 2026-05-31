@@ -1,17 +1,14 @@
 <div align="center">
 
-# 📄 Interactive Web Resume
+# Interactive Web Resume
 
-**Professional Interactive Resume / Curriculum Vitae**
+**A public resume artifact built for GitHub Pages, PDF sharing, and fast review by recruiters or collaborators.**
 
-<i>👉 <a href="README-th.md">🇹🇭 อ่านรายละเอียดภาษาไทย</a></i><br><br>
+[![Live Resume](https://img.shields.io/badge/Live-Resume-6366f1?style=for-the-badge&logo=githubpages&logoColor=white)](https://romeototo.github.io/resume/)
+[![Portfolio](https://img.shields.io/badge/Main-Portfolio-111827?style=for-the-badge&logo=google-chrome&logoColor=white)](https://romeototo.github.io/portfolio-website/)
+[![PDF](https://img.shields.io/badge/PDF-Download-ef4444?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](./romeototo-resume.pdf)
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![GitHub Pages](https://img.shields.io/badge/Hosted_on-GitHub_Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
-
-[**Live Interactive Demo**](https://romeototo.github.io/resume/) | [**PDF Download**](./romeototo-resume.pdf) | [**Main Portfolio**](https://romeototo.github.io/portfolio-website/) | [**GitHub Profile**](https://github.com/romeototo)
+[Live Interactive Demo](https://romeototo.github.io/resume/) | [PDF Download](./romeototo-resume.pdf) | [Thai README](README-th.md)
 
 </div>
 
@@ -20,42 +17,48 @@
 ## Project Snapshot
 
 | Item | Details |
-| ---- | ------- |
-| **Role** | Standalone interactive CV artifact linked from the profile and portfolio |
-| **Live demo** | [romeototo.github.io/resume](https://romeototo.github.io/resume/) |
-| **Stack** | HTML, CSS, JavaScript, print-friendly CSS |
-| **Output** | Web resume, PDF artifact, print-to-PDF support, and QR access |
-| **Status** | Active professional artifact |
-| **Main portfolio** | [romeototo.github.io/portfolio-website](https://romeototo.github.io/portfolio-website/) |
+| --- | --- |
+| Role | Standalone resume and professional profile artifact |
+| Live demo | [romeototo.github.io/resume](https://romeototo.github.io/resume/) |
+| Stack | HTML, CSS, JavaScript, print-friendly CSS |
+| Outputs | Web resume, PDF artifact, QR access, print-to-PDF layout |
+| Related hub | [Portfolio Website](https://romeototo.github.io/portfolio-website/) |
 
 ---
 
-## 🌟 Overview
+## Why This Exists
 
-This repository contains the source code for my **Interactive Web Resume**. It was built to move beyond traditional PDF formats, offering recruiters and hiring managers a clean, responsive, and engaging way to review my professional background, skills, and projects.
+This repo keeps the resume separate from the main portfolio so it can stay focused, printable, and easy to share.
 
-Designed with a modern aesthetic, it ensures readability and structure while maintaining lightning-fast load times.
+The page is built to:
 
-## 🚀 Features
-
-- **Mobile Responsive:** Fully optimized for viewing on desktops, tablets, and smartphones.
-- **Print-Friendly:** Features specific CSS media queries (`@media print`) ensuring the resume prints cleanly to physical paper or PDF format without rendering navigation bars or interactive UI elements.
-- **Modern UI/UX:** Clean typography, distinct visual hierarchies, and subtle hover effects to guide the reader's eye.
-- **Quick Links:** Seamlessly bridges viewers to my live portfolio, GitHub repositories, and contact methods.
+- load quickly on desktop and mobile
+- print cleanly to paper or PDF
+- link directly to GitHub, portfolio, and project proof
+- avoid heavy frameworks for a small professional artifact
 
 ---
 
-## 🛠️ Technology Stack
+## Features
 
-- **Structure:** Semantic HTML5 for maximum accessibility.
-- **Styling:** Vanilla CSS3 (Flexbox, Grid, Custom Properties).
-- **Hosting:** Deployed instantly via GitHub Pages.
+- Responsive layout for mobile, tablet, and desktop
+- Print-specific CSS for clean PDF output
+- QR code for quick mobile access
+- Direct links to portfolio and GitHub profile
+- Static deployment through GitHub Pages
 
 ---
 
-## 📱 Quick Access
+## Tech Stack
 
-Scan the QR code below from your mobile device to view the resume on the go:
+- Semantic HTML5
+- CSS3 with responsive layout and print media queries
+- Vanilla JavaScript for lightweight interactions
+- GitHub Pages hosting
+
+---
+
+## Quick Access
 
 <img src="./resume_qr.png" width="150" alt="Resume QR Code">
 
